@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* ── CampaignOS Design Tokens ── */
+@theme {
+  --color-navy-900: #0A2540;
+  --color-navy-950: #061525;
+  --color-navy-800: #0F3460;
+  --color-navy-700: #164275;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-400: #94a3b8;
+  --color-slate-300: #cbd5e1;
+  --color-slate-100: #f1f5f9;
+  --color-teal-500: #00C896;
+  --color-teal-400: #2dd4a8;
+  --color-teal-600: #00a67a;
+  --color-amber-500: #F59E0B;
+  --color-red-500: #EF4444;
+  --color-blue-500: #3b82f6;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --radius-card: 16px;
+  --radius-input: 10px;
+  --radius-chip: 100px;
+}
+
+/* ── Base ── */
+body {
+  font-family: var(--font-body);
+  background: var(--color-navy-950);
+  color: var(--color-slate-100);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-700);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-slate-600);
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 200, 150, 0.3); }
+  50% { box-shadow: 0 0 20px 4px rgba(0, 200, 150, 0.15); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ── Markdown Styles (AI output) ── */
+.ai-markdown h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-teal-400);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ai-markdown h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-slate-100);
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.ai-markdown p {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  color: var(--color-slate-300);
+}
+
+.ai-markdown ul, .ai-markdown ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.ai-markdown li {
+  margin-bottom: 0.35rem;
+  line-height: 1.6;
+  color: var(--color-slate-300);
+}
+
+.ai-markdown strong {
+  color: var(--color-slate-100);
+  font-weight: 600;
+}
+
+.ai-markdown code {
+  font-family: var(--font-mono);
+  background: var(--color-navy-800);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.ai-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+}
+
+.ai-markdown th, .ai-markdown td {
+  border: 1px solid var(--color-slate-700);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.ai-markdown th {
+  background: var(--color-navy-800);
+  color: var(--color-teal-400);
+  font-weight: 600;
+}
+
+/* ── Glass card effect ── */
+.glass-card {
+  background: rgba(15, 52, 96, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: var(--radius-card);
+}
