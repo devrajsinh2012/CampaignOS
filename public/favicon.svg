@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#0D3B66"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C896"/>
+      <stop offset="100%" stop-color="#00E5A0"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <!-- Stylized "C" lettermark with signal/broadcast arcs -->
+  <!-- Main C shape -->
+  <path d="M280 136c-66.3 0-120 53.7-120 120s53.7 120 120 120c30 0 57.5-11 78.6-29.2" 
+        fill="none" stroke="url(#teal)" stroke-width="40" stroke-linecap="round"/>
+  <!-- Signal arcs (representing broadcast/campaign reach) -->
+  <path d="M340 196c22 18 36 45 36 76s-14 58-36 76" 
+        fill="none" stroke="#00C896" stroke-width="24" stroke-linecap="round" opacity="0.7"/>
+  <path d="M380 172c32 28 52 69 52 116s-20 88-52 116" 
+        fill="none" stroke="#00C896" stroke-width="20" stroke-linecap="round" opacity="0.4"/>
+  <!-- Dot accent -->
+  <circle cx="310" cy="256" r="20" fill="url(#teal)"/>
+</svg>

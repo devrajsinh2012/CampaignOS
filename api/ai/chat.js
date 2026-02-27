@@ -23,7 +23,7 @@ export default async function handler(req, res) {
 
     const apiKey = process.env.LLM_API_KEY;
     const baseUrl = process.env.LLM_API_BASE_URL || 'https://integrate.api.nvidia.com/v1';
-    const model = process.env.LLM_MODEL_NAME || 'moonshotai/kimi-k2';
+    const model = process.env.LLM_MODEL_NAME || 'meta/llama-3.3-70b-instruct';
 
     if (!apiKey) {
       return res.status(500).json({ error: 'LLM API key not configured' });
