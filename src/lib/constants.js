@@ -179,3 +179,106 @@ export const VOICE_TONES = [
   'Conversational',
   'Authoritative',
 ];
+
+// Festival Geographies
+export const FESTIVAL_GEOGRAPHIES = [
+  'India',
+  'United States',
+  'United Kingdom',
+  'Middle East',
+  'Southeast Asia',
+  'Europe',
+  'Global',
+];
+
+// Months
+export const FESTIVAL_MONTHS = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December',
+];
+
+// News Categories
+export const NEWS_CATEGORIES = [
+  'All',
+  'Platform Updates',
+  'Paid Media',
+  'SEO/Content',
+  'Email',
+  'AI & Martech',
+  'Strategy',
+];
+
+// Prompt Library Categories
+export const PROMPT_CATEGORIES = [
+  'Product Photography',
+  'Lifestyle & UGC',
+  'Ad Backgrounds',
+  'Logo Mockups',
+  'Social Graphics',
+  'Video B-Roll',
+  'Thumbnails',
+];
+
+// Prompt Library Tools
+export const PROMPT_TOOLS = [
+  'Midjourney',
+  'DALL-E 3',
+  'Adobe Firefly',
+  'Runway',
+  'Sora',
+  'Kling',
+  'Pika',
+];
+
+// Prompt Library Styles
+export const PROMPT_STYLES = [
+  'Minimalist',
+  'Luxurious',
+  'Playful',
+  'Corporate',
+  'Cinematic',
+  'Lo-Fi',
+  'Editorial',
+];
+
+// Experiment Types
+export const EXPERIMENT_TYPES = [
+  'A/B Test (2 variants)',
+  'A/B/C Test (3 variants)',
+  'Multivariate',
+];
+
+// Test Elements
+export const TEST_ELEMENTS = [
+  'Creative',
+  'Audience',
+  'Landing Page',
+  'Offer',
+  'Copy',
+  'Subject Line',
+  'CTA',
+  'Bid Strategy',
+];
+
+// Confidence Levels
+export const CONFIDENCE_LEVELS = [
+  { value: 80, label: '80%' },
+  { value: 90, label: '90%' },
+  { value: 95, label: '95% (Recommended)' },
+];
+
+// Industries for Forecasting
+export const INDUSTRIES = [
+  'E-commerce / DTC',
+  'SaaS / B2B',
+  'Local Business',
+  'Mobile App',
+  'Finance',
+  'Healthcare',
+  'Education',
+  'Real Estate',
+  'Travel & Hospitality',
+  'Food & Beverage',
+  'Fashion & Apparel',
+  'Entertainment',
+];

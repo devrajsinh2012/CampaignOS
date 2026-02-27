@@ -31,12 +31,19 @@ const NAV_ITEMS = [
   { to: '/learn', label: 'Learning Hub', icon: GraduationCap },
 ];
 
-// Phase 2 items (disabled in prototype)
-const COMING_SOON = [
-  { label: 'Creative Studio', icon: Palette },
-  { label: 'Audience Builder', icon: Users },
-  { label: 'Forecasting', icon: TrendingUp },
-  { label: 'Experiments', icon: FlaskConical },
+const PHASE2_ITEMS = [
+  { to: '/creative', label: 'Creative Studio', icon: Palette },
+  { to: '/audience', label: 'Audience Builder', icon: Users },
+  { to: '/prompt-generator', label: 'Prompt Generator', icon: Wand2 },
+  { to: '/festival', label: 'Festival Planner', icon: Calendar },
+  { to: '/news', label: 'News & Trends', icon: Newspaper },
+  { to: '/prompts', label: 'Prompt Library', icon: Image },
+];
+
+const PHASE3_ITEMS = [
+  { to: '/forecasting', label: 'Forecasting', icon: TrendingUp },
+  { to: '/experiments', label: 'Experiments', icon: FlaskConical },
+  { to: '/competitive', label: 'Competitive Intel', icon: Eye },
 ];
 
 export default function Sidebar() {
@@ -106,22 +113,53 @@ export default function Sidebar() {
             <>
               <div className="h-px bg-slate-700/50 my-4" />
               <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider px-3 mb-2">
-                Coming Soon
+                Creative & Content
               </p>
-              {COMING_SOON.map((item) => (
-                <div
-                  key={item.label}
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-600 cursor-not-allowed"
-                >
-                  <item.icon size={18} />
-                  <span>{item.label}</span>
-                  <span className="ml-auto text-[10px] bg-slate-700/50 text-slate-500 px-2 py-0.5 rounded-full">
-                    Soon
-                  </span>
-                </div>
-              ))}
             </>
           )}
+          {PHASE2_ITEMS.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) =>
+                `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200
+                ${
+                  isActive
+                    ? 'bg-teal-500/15 text-teal-400 border border-teal-500/20'
+                    : 'text-slate-400 hover:text-slate-100 hover:bg-slate-700/30'
+                }`
+              }
+            >
+              <item.icon size={18} className="flex-shrink-0" />
+              {sidebarOpen && <span>{item.label}</span>}
+            </NavLink>
+          ))}
+
+          {sidebarOpen && (
+            <>
+              <div className="h-px bg-slate-700/50 my-4" />
+              <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider px-3 mb-2">
+                Analytics & Intelligence
+              </p>
+            </>
+          )}
+          {PHASE3_ITEMS.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) =>
+                `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200
+                ${
+                  isActive
+                    ? 'bg-teal-500/15 text-teal-400 border border-teal-500/20'
+                    : 'text-slate-400 hover:text-slate-100 hover:bg-slate-700/30'
+                }`
+              }
+            >
+              <item.icon size={18} className="flex-shrink-0" />
+              {sidebarOpen && <span>{item.label}</span>}
+            </NavLink>
+          ))}
         </nav>
 
         {/* Bottom — Usage & User */}
